@@ -29,6 +29,7 @@ x-airflow-common:
     - ./airflow.cfg:/opt/airflow/airflow.cfg
     - ./airflow-data/logs:/opt/airflow/logs
     - ./airflow-data/plugins:/opt/airflow/plugins
+    - ./webserver_config.py:/opt/airflow/webserver_config.py
 
 services:
     airflow-init:
