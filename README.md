@@ -65,11 +65,28 @@ The current deployment leverages provisioning, which uses code to define datasou
 ## Steps
 
 The following steps are to be run in a terminal:
+```shell
+# Clone the repository
+git clone https://github.com/sarahmk125/airflow-docker-metrics.git
 
-- Clone the repository: `git clone https://github.com/sarahmk125/airflow-docker-metrics.git`
-- Navigate to the cloned folder: `cd airflow-docker-metrics`
-- Startup the containers: `docker-compose -f docker-compose.yml up -d`. (They can be stopped by running the same command except with `stop` at the end, or `down` to remove them)
-- Note: a generic admin user is created when bringing up the containers. Username is `admin` and password is `password`.
+# Navigate to the cloned folder
+cd airflow-docker-metrics
+
+
+# Save docker images for closed network
+./save_docker_image.ps1
+
+# If ps1 file cannot excutable by security policy
+Set-ExecutionPolicy RemoteSigned
+
+# If you want to start up the containers in closed network
+docker load -i [filename].tar
+docker-compose -f docker-compose.yml up -d
+
+# Notes
+# a generic admin user is created when bringing up the containers. Username is `admin` and password is `password`.
+```
+
 
 ## The Result
 
