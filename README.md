@@ -67,7 +67,7 @@ The current deployment leverages provisioning, which uses code to define datasou
 The following steps are to be run in a terminal:
 ```shell
 # Clone the repository
-git clone https://github.com/sarahmk125/airflow-docker-metrics.git
+git clone https://github.com/rover0811/airflow-docker-metrics.git
 
 # Navigate to the cloned folder
 cd airflow-docker-metrics
